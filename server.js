@@ -29,7 +29,7 @@ app.post('/enviar-email', async (req, res) => {
   const { nomePinguim, email, confirmacao } = req.body;
 
   const mailOptions = {
-    from: 'seu-email@gmail.com',
+    from: 'joaopedrogundimg@gmail.com',
     to: email,
     subject: 'Confirmação de Presença',
     text: `Olá Pinguim: ${nomePinguim}, sua confirmação de presença foi registrada como "${confirmacao}". Obrigado!`,
