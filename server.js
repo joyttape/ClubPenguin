@@ -5,14 +5,10 @@ const cors = require('cors');
 const app = express();
 const PORT = 5000;
 
-
-app.use(cors());
-app.use(express.json());
-
-const cors = require('cors');
 app.use(cors({
-  origin: 'https://clubpenguin-1.onrender.com' // Substitua pela URL do seu frontend
-}));
+    origin: 'https://clubpenguin-1.onrender.com'
+  }));
+  app.use(express.json());
 
 
 const transporter = nodemailer.createTransport({
