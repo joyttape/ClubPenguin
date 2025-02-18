@@ -3,33 +3,31 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: 'https://clubpenguin-1.onrender.com'
-  }));
-  app.use(express.json());
-
+  origin: 'https://clubpenguin-1.onrender.com',
+}));
+app.use(express.json());
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, 
-    auth: {
-      user: 'joaopedrogundimg@gmail.com',
-      pass: 'tqda wnmz aynm kclo',
-    },
-    tls: {
-      rejectUnauthorized: false, 
-    },
-  });
-
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false,
+  },
+});
 
 app.post('/enviar-email', async (req, res) => {
   const { nomePinguim, email, confirmacao } = req.body;
 
   const mailOptions = {
-    from: 'joaopedrogundimg@gmail.com',
+    from: process.env.EMAIL_USER,
     to: email,
     subject: 'Confirmação de Presença',
     text: `Olá Pinguim: ${nomePinguim}, sua confirmação de presença foi registrada como "${confirmacao}". Obrigado!`,
