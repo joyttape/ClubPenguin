@@ -10,7 +10,7 @@ const ConfirmacaoPresenca = () => {
     e.preventDefault();
     if (nomePinguim && email && confirmacao) {
       try {
-        const response = await fetch('http://localhost:5000/enviar-email', {
+        const response = await fetch('https://clubpenguin.onrender.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

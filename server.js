@@ -9,6 +9,11 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://clubpenguin-1.onrender.com' // Substitua pela URL do seu frontend
+}));
+
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
