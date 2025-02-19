@@ -37,7 +37,7 @@ app.use(cors({
         <p>Olá Pinguim: ${nomePinguim}, sua confirmação de presença foi registrada como "${confirmacao}". Obrigado!</p>
         <p>Todos os direitos reservados ao Joyttape Studios c.a</p>
 
-        <img src="https://pbs.twimg.com/media/FSRWDuIXMAAKDcB?format=jpg&name=4096x4096" alt="Imagem de boas-vindas" style="width: 300px; height: auto;">
+        <img src="https://pbs.twimg.com/media/FSRWDuIXMAAKDcB?format=jpg&name=4096x4096" alt="Imagem de boas-vindas" style="width: 500px; height: auto;">
       `,
     };
   

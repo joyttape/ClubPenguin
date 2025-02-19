@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
 
+/* Estilos gerais */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   background-image: url('/src/fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px; 
 }
 
 .conteudo {
@@ -15,7 +19,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 40px;
+  max-width: 1200px; 
+  padding: 20px;
   border: 5px solid #ffbc3a;
   border-radius: 15px;
   background-color: #fffbca;
@@ -23,7 +28,8 @@ body {
 }
 
 .imagem-lado img {
-  width: 400px;
+  width: 100%;
+  max-width: 400px; 
   height: auto;
 }
 
@@ -42,7 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .titulo {
@@ -58,11 +64,11 @@ input {
   border-radius: 2px;
   font-size: 20px;
   border-color: #d57e00;
-  margin-top: 5px; 
+  margin-top: 5px;
 }
 
 label {
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 button {
@@ -81,14 +87,14 @@ button {
   cursor: pointer;
 }
 
-.cores{
+.cores {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap:10px;
+  gap: 10px;
 }
 
-.cor1,.cor2,.cor3,.cor4,.cor5,.cor5,.cor6{
+.cor1, .cor2, .cor3, .cor4, .cor5, .cor6 {
   margin-top: 1px;
   width: 40px;
   margin-bottom: 30px;
@@ -97,51 +103,28 @@ button {
   cursor: pointer;
 }
 
-.cor1{
-  background: #02a797;
-  border: none;
-}
-
-.cor2{
-  background: #cc0000;
-  border: none;
-}
-
-.cor3{
-  background: #ff3299;
-  border: none;
-}
-
-.cor4{
-  background: #650099;
-  border: none;
-}
-
-.cor5{
-  background: #009900;
-  border: none;
-}
-
-.cor6{
-  background: #333333;
-  border: none;
-}
+.cor1 { background: #02a797; border: none; }
+.cor2 { background: #cc0000; border: none; }
+.cor3 { background: #ff3299; border: none; }
+.cor4 { background: #650099; border: none; }
+.cor5 { background: #009900; border: none; }
+.cor6 { background: #333333; border: none; }
 
 .campo-formulario {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px; /* Espaço entre os campos */
+  margin-bottom: 10px;
 }
 
-.aviso{
-  color:#0052AF;
+.aviso {
+  color: #0052AF;
   font-family: "Chicle", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.jogo,p{
-  color:#0052AF;
+.jogo, p {
+  color: #0052AF;
   font-family: "Chicle", serif;
   font-weight: 400;
   font-style: normal;
@@ -151,4 +134,79 @@ button {
 .radio-group {
   display: flex;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px; 
+  }
+
+  .conteudo {
+    flex-direction: column; 
+    padding: 15px;
+  }
+
+  .imagem-lado img {
+    max-width: 100%;
+  }
+
+  .formulario-lado {
+    margin-left: 0; 
+    margin-top: 20px; 
+  }
+
+  .titulo {
+    font-size: 28px;
+    -webkit-text-stroke: 1.5px #0052AF; 
+  }
+
+  button {
+    font-size: 28px; 
+    width: 120px; 
+    height: 40px; 
+  }
+
+  input {
+    font-size: 16px; 
+  }
+
+  .cores {
+    flex-wrap: wrap; 
+    gap: 5px; 
+  }
+
+  .cor1, .cor2, .cor3, .cor4, .cor5, .cor6 {
+    width: 30px; 
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+
+  .jogo, p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 24px; 
+    width: 100px; 
+    height: 35px; 
+  }
+
+  input {
+    font-size: 14px; 
+  }
+
+  .cor1, .cor2, .cor3, .cor4, .cor5, .cor6 {
+    width: 25px; 
+    padding: 6px;
+  }
+
+  .jogo, p {
+    font-size: 16px; 
+  }
 }
