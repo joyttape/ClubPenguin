@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('/src/fundo.jpg');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  border: 5px solid #ffbc3a;
+  border-radius: 15px;
+  background-color: #fffbca;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.imagem-lado img {
+  width: 400px;
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.botao-imagem {
+  margin-top: 10px;
+  background-color: #ffb409;
+  border: 2px solid #d57e00;
+  color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.formulario-lado {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.titulo {
+  font-family: "Bangers", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffff;
+  -webkit-text-stroke: 2px #0052AF;
+  font-size: 35px;
+}
+
+input {
+  border-radius: 2px;
+  font-size: 20px;
+  border-color: #d57e00;
+  margin-top: 5px; 
+}
+
+label {
+  margin-bottom: 5px; 
+}
+
+button {
+  font-family: "Bangers", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffff;
+  -webkit-text-stroke: 1.5px black;
+  font-size: 35px;
+  background-color: #ffb409;
+  border-color: #d57e00;
+  height: 45px;
+  width: 150px;
+  margin-top: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cores{
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:10px;
 }
 
-.App-link {
-  color: #61dafb;
+.cor1,.cor2,.cor3,.cor4,.cor5,.cor5,.cor6{
+  margin-top: 1px;
+  width: 40px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cor1{
+  background: #02a797;
+  border: none;
+}
+
+.cor2{
+  background: #cc0000;
+  border: none;
+}
+
+.cor3{
+  background: #ff3299;
+  border: none;
+}
+
+.cor4{
+  background: #650099;
+  border: none;
+}
+
+.cor5{
+  background: #009900;
+  border: none;
+}
+
+.cor6{
+  background: #333333;
+  border: none;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Espaço entre os campos */
+}
+
+.aviso{
+  color:#0052AF;
+  font-family: "Chicle", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jogo,p{
+  color:#0052AF;
+  font-family: "Chicle", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
 }
